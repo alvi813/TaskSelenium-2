@@ -122,7 +122,7 @@
       <workItem from="1588154249783" duration="436000" />
       <workItem from="1588154916350" duration="6251000" />
       <workItem from="1588184570075" duration="512000" />
-      <workItem from="1588192179535" duration="15690000" />
+      <workItem from="1588192179535" duration="22590000" />
     </task>
     <servers />
   </component>
@@ -138,14 +138,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="677" y="177" key="#SeleniumTask/0.0.1920.1040@0.0.1920.1040" timestamp="1587866675200" />
+    <state x="690" y="274" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1588215798069">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="274" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588215798069" />
     <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588196837422">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588196837422" />
-    <state x="765" y="228" key="#com.intellij.ide.util.MemberChooser" timestamp="1588137312745">
+    <state x="765" y="228" key="#com.intellij.ide.util.MemberChooser" timestamp="1588214228496">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="228" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1588137312745" />
+    <state x="765" y="228" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1588214228496" />
     <state width="1876" height="187" key="GridCell.Tab.0.bottom" timestamp="1588210470718">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
