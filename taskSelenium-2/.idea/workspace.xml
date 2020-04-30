@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="910ac7cb-65f0-43c4-8c7e-fa7c0b5f796b" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1arx6lTt9g2TErogIOiiPAhpEeJ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="W:\MyTasks\taskSelenium\drivers" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.SeleniumTask">
+    <configuration name="SeleniumTask" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="SeleniumTask" />
+      <module name="taskSelenium-2" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="taskSelenium-2 [clean,compile,package]" type="MavenRunConfiguration" factoryName="Maven" temporary="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="compile" />
+                <option value="package" />
+              </list>
+            </option>
+            <option name="pomFileName" value="pom.xml" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.SeleniumTask" />
+        <item itemvalue="Maven.taskSelenium-2 [clean,compile,package]" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="910ac7cb-65f0-43c4-8c7e-fa7c0b5f796b" name="Default Changelist" comment="" />
+      <created>1587507341105</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1587507341105</updated>
+      <workItem from="1587507344010" duration="15790000" />
+      <workItem from="1587559189575" duration="4734000" />
+      <workItem from="1587585529901" duration="6765000" />
+      <workItem from="1587593680292" duration="12905000" />
+      <workItem from="1587607005747" duration="840000" />
+      <workItem from="1587607861552" duration="7043000" />
+      <workItem from="1587650556782" duration="1350000" />
+      <workItem from="1587677680932" duration="15948000" />
+      <workItem from="1587711652981" duration="1778000" />
+      <workItem from="1587739622280" duration="2409000" />
+      <workItem from="1587760135429" duration="7662000" />
+      <workItem from="1587774122098" duration="9711000" />
+      <workItem from="1587783964952" duration="2154000" />
+      <workItem from="1587786564245" duration="198000" />
+      <workItem from="1587865294304" duration="2660000" />
+      <workItem from="1587935817870" duration="12407000" />
+      <workItem from="1587948945904" duration="21000" />
+      <workItem from="1587949290144" duration="3778000" />
+      <workItem from="1587994034657" duration="1099000" />
+      <workItem from="1588022480382" duration="18911000" />
+      <workItem from="1588045853746" duration="4732000" />
+      <workItem from="1588087482463" duration="892000" />
+      <workItem from="1588091427947" duration="1299000" />
+      <workItem from="1588104178185" duration="25458000" />
+      <workItem from="1588130314306" duration="23759000" />
+      <workItem from="1588154249783" duration="436000" />
+      <workItem from="1588154916350" duration="6251000" />
+      <workItem from="1588184570075" duration="512000" />
+      <workItem from="1588192179535" duration="15690000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="680" y="176" key="#Project_Structure" timestamp="1587513175455">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="680" y="176" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1587513175455" />
+    <state x="677" y="177" key="#SeleniumTask" timestamp="1587866675200">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="677" y="177" key="#SeleniumTask/0.0.1920.1040@0.0.1920.1040" timestamp="1587866675200" />
+    <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588196837422">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588196837422" />
+    <state x="765" y="228" key="#com.intellij.ide.util.MemberChooser" timestamp="1588137312745">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="765" y="228" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1588137312745" />
+    <state width="1876" height="187" key="GridCell.Tab.0.bottom" timestamp="1588210470718">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="187" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1588210470718" />
+    <state width="1876" height="187" key="GridCell.Tab.0.center" timestamp="1588210470718">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="187" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1588210470718" />
+    <state width="1876" height="187" key="GridCell.Tab.0.left" timestamp="1588210470717">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="187" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1588210470717" />
+    <state width="1876" height="187" key="GridCell.Tab.0.right" timestamp="1588210470718">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="187" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1588210470718" />
+    <state x="590" y="302" key="SettingsEditor" timestamp="1587784665413">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="590" y="302" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1587784665413" />
+    <state x="744" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1588192192357">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="744" y="345" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588192192357" />
+  </component>
+</project>
