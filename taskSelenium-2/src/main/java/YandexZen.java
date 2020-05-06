@@ -39,12 +39,6 @@ public class YandexZen {
         return properties.getProperty(property);
     }
 
-    public FirefoxProfile specifyFirefoxProfile(String myFirefoxProfile) {
-        ProfilesIni profile = new ProfilesIni();
-        FirefoxProfile firefoxProfile = profile.getProfile(myFirefoxProfile);
-        return firefoxProfile;
-    }
-
 
     public FirefoxOptions setFirefoxMode() {
         FirefoxBinary firefoxBinary = new FirefoxBinary();
@@ -55,6 +49,14 @@ public class YandexZen {
         }
         return firefoxOptions;
     }
+
+
+    public void specifyFirefoxProfile(FirefoxOptions firefoxOptions, String myFirefoxProfile) {
+        ProfilesIni profile = new ProfilesIni();
+        FirefoxProfile firefoxProfile = profile.getProfile(myFirefoxProfile);
+        firefoxOptions.setProfile(firefoxProfile);
+    }
+
 
     public void openWebPage(WebDriver driver, String urlLine) {
         driver.get(urlLine);

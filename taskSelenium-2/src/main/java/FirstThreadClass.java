@@ -17,29 +17,11 @@ import java.util.Set;
 
 public class FirstThreadClass extends YandexZen implements Runnable {
 
-
-
-    static int numberOfLinkInTextFile = 1; // номер ссылки из текстового файла, с которой будем работать
-
-
-
-
-
-
-
-
-
-
-
-
-
+    private static int numberOfLinkInTextFile = 1; // номер ссылки из текстового файла, с которой будем работать
 
     public void closeDriver(WebDriver driver) {
         driver.quit();
     }
-
-
-
 
     //----------------------------------------------------------------------------------------
 
@@ -55,7 +37,7 @@ public class FirstThreadClass extends YandexZen implements Runnable {
 
 
 
-        for (int counterOnHowManyPagesWillCollectLinks = 1;
+        for (int counterOnHowManyPagesWillCollectLinks = 10;
              numberOfLinkInTextFile <= counterOnHowManyPagesWillCollectLinks;
              numberOfLinkInTextFile++) {
 
@@ -158,8 +140,7 @@ public class FirstThreadClass extends YandexZen implements Runnable {
             //---------------------------------------------------------------------------------------------------
 
             //------------
-            FirefoxProfile firefoxProfile = specifyFirefoxProfile(myFirefoxProfile);
-            firefoxOptions.setProfile(firefoxProfile);
+            specifyFirefoxProfile(firefoxOptions, myFirefoxProfile);
             //------------
 
             WebDriver firefoxDriver3 = new FirefoxDriver(firefoxOptions);

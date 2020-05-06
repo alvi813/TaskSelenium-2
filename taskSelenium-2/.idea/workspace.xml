@@ -31,18 +31,22 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/images" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="W:\MyTasks\taskSelenium-2\src\main\images" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="W:\MyTasks\taskSelenium-2\src\main\images\captcha" />
       <recent name="W:\MyTasks\taskSelenium\drivers" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.SeleniumTask">
+  <component name="RunManager" selected="Maven.taskSelenium-2 [clean,compile,package]">
     <configuration name="SeleniumTask" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="SeleniumTask" />
       <module name="taskSelenium-2" />
@@ -79,8 +83,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.SeleniumTask" />
         <item itemvalue="Maven.taskSelenium-2 [clean,compile,package]" />
+        <item itemvalue="Application.SeleniumTask" />
       </list>
     </recent_temporary>
   </component>
@@ -122,7 +126,13 @@
       <workItem from="1588154249783" duration="436000" />
       <workItem from="1588154916350" duration="6251000" />
       <workItem from="1588184570075" duration="512000" />
-      <workItem from="1588192179535" duration="22590000" />
+      <workItem from="1588192179535" duration="22834000" />
+      <workItem from="1588288122762" duration="18763000" />
+      <workItem from="1588375434505" duration="835000" />
+      <workItem from="1588457497170" duration="34123000" />
+      <workItem from="1588556703179" duration="19357000" />
+      <workItem from="1588633110716" duration="21334000" />
+      <workItem from="1588712460581" duration="11779000" />
     </task>
     <servers />
   </component>
@@ -146,33 +156,33 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588196837422" />
-    <state x="765" y="228" key="#com.intellij.ide.util.MemberChooser" timestamp="1588214228496">
+    <state x="765" y="228" key="#com.intellij.ide.util.MemberChooser" timestamp="1588558154482">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="228" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1588214228496" />
-    <state width="1876" height="187" key="GridCell.Tab.0.bottom" timestamp="1588210470718">
+    <state x="765" y="228" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1588558154482" />
+    <state width="1801" height="208" key="GridCell.Tab.0.bottom" timestamp="1588729083853">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="187" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1588210470718" />
-    <state width="1876" height="187" key="GridCell.Tab.0.center" timestamp="1588210470718">
+    <state width="1801" height="208" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1588729083853" />
+    <state width="1801" height="208" key="GridCell.Tab.0.center" timestamp="1588729083853">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="187" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1588210470718" />
-    <state width="1876" height="187" key="GridCell.Tab.0.left" timestamp="1588210470717">
+    <state width="1801" height="208" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1588729083853" />
+    <state width="1801" height="208" key="GridCell.Tab.0.left" timestamp="1588729083852">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="187" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1588210470717" />
-    <state width="1876" height="187" key="GridCell.Tab.0.right" timestamp="1588210470718">
+    <state width="1801" height="208" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1588729083852" />
+    <state width="1801" height="208" key="GridCell.Tab.0.right" timestamp="1588729083853">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="187" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1588210470718" />
+    <state width="1801" height="208" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1588729083853" />
     <state x="590" y="302" key="SettingsEditor" timestamp="1587784665413">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="590" y="302" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1587784665413" />
-    <state x="744" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1588192192357">
+    <state x="744" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1588713095032">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="744" y="345" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588192192357" />
+    <state x="744" y="345" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588713095032" />
   </component>
 </project>
