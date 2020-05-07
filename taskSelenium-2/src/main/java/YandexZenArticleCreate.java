@@ -2,17 +2,8 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import javax.imageio.ImageIO;
-import java.awt.*;
-import java.awt.datatransfer.DataFlavor;
-import java.awt.datatransfer.StringSelection;
-import java.awt.datatransfer.Transferable;
-import java.awt.datatransfer.UnsupportedFlavorException;
-import java.awt.event.KeyEvent;
-import java.awt.image.BufferedImage;
 import java.io.*;
 import java.net.HttpURLConnection;
-import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.List;
 
@@ -22,15 +13,35 @@ public class YandexZenArticleCreate {
     static WebDriverWait wait;
     static WebDriverWait waitImgLoad;
 
-    public YandexZenArticleCreate(WebDriver driver) throws IOException {
+    public YandexZenArticleCreate(WebDriver driver) {
         this.driver = driver;
     }
 
+    private int tagListIndex = 0;
+    private int imgUrlListIndex = 0;
 
-    public void addArticleToYandexZen(String translatedArticleTitle, List<String> translatedTextList, List<String> tagList, List<String> imgUrlLinks) throws IOException, UnsupportedFlavorException, AWTException, URISyntaxException, InterruptedException {
+    public void dowloadFileImage(List<String> imgUrlLinks, String pathSaveImage) throws IOException {
+        URL connection = new URL(imgUrlLinks.get(imgUrlListIndex++));
+        HttpURLConnection urlconn;
+        urlconn = (HttpURLConnection) connection.openConnection();
+        urlconn.setRequestMethod("GET");
+        urlconn.connect();
+        InputStream in = null;
+        in = urlconn.getInputStream();
+        OutputStream writer = new FileOutputStream(pathSaveImage);
+        byte[] buffer = new byte[1];
+        int c = in.read(buffer);
+        while (c > 0) {
+            writer.write(buffer, 0, c);
+            c = in.read(buffer);
+        }
+        writer.flush();
+        writer.close();
+        in.close();
+    }
+
+    public void addArticleToYandexZen(String translatedArticleTitle, List<String> translatedTextList, List<String> tagList, List<String> imgUrlLinks) throws IOException {
         wait = new WebDriverWait(driver, 10);
-        //waitHintWindow.ignoring(org.openqa.selenium.TimeoutException.class);
-
         waitImgLoad = new WebDriverWait(driver, 60);  // для ожидания загрузки картинок
 
         // ждём, пока появится кнопка "+":
@@ -74,48 +85,47 @@ public class YandexZenArticleCreate {
         driver.findElement(By.xpath("//div[@class='editable-input editor__title-input']//div[@class='notranslate public-DraftEditor-content']")).sendKeys(translatedArticleTitle);
 
         // копируем текст поабзацно в поле ввода статьи:
-        int tagListIndex = 0;
-        int imgUrlListIndex = 0;
         WebElement webTextInputField = driver.findElement(By.xpath("//div[@class='zen-editor']//div[@class='notranslate public-DraftEditor-content']"));
 
         for (String paragraph : translatedTextList) {
 
             if (tagList.get(tagListIndex++).equals("figure")) {
 
-                //копируем картинку в буфер обмена:
-                Image image = ImageIO.read(new URL(imgUrlLinks.get(imgUrlListIndex++)));
-                ImageTransferable imageTransferable = new ImageTransferable(image);
-                Toolkit.getDefaultToolkit().getSystemClipboard().setContents(imageTransferable, null);
+                // производим скачивание по url картинки:
+                String pathSaveImage = "src/main/images/articleImage.jpeg";
+
+                dowloadFileImage(imgUrlLinks, pathSaveImage);
+
+                File file = new File(pathSaveImage);
 
 
-                webTextInputField.sendKeys(Keys.CONTROL, "v");
+                // нажмём на кнопку, чтобы вставить картинку:
+                wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//button[@class='side-button side-button_logo_image ']")));
+                driver.findElement(By.xpath("//button[@class='side-button side-button_logo_image ']")).click();
 
+                // ждём, пока появится окно для вставки ссылки на картинку:
+                wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@class='popup__content popup__content_normal']")));
 
+                // находим на странице элемент, который является файловым полем ввода (input с типом file), и печатаем в него абсолютный путь к файлу с картинкой:
+                driver.findElement(By.xpath("//input[@class='image-popup__file-input']")).sendKeys(file.getAbsolutePath());
 
+                //ждём, пока картинка появится на странице:
+                wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//figure[" + imgUrlListIndex + "]//img[@class='zen-editor-block-image__image']")));
 
-                continue;
+                // ждём, пока загрузятся картинки:
+                waitImgLoad.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//span[contains(text(), 'загружается')]")));
+
+                // удаляем временный файл, в котором сохраняли картинки для статьи, при завершении работы программы:
+                file.deleteOnExit();
+
+                // перейдём в элемент под картинкой (для вставки подписи под картинкой):
+                wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//figcaption[@class='zen-editor-block-image__caption zen-editor-block-image__caption_empty']")));
+                driver.findElement(By.xpath("//figcaption[@class='zen-editor-block-image__caption zen-editor-block-image__caption_empty']")).click();
             }
 
             webTextInputField.sendKeys(paragraph);
             webTextInputField.sendKeys(Keys.ENTER);
-
         }
-
-        // ждём, пока загрузятся картинки:
-        waitImgLoad.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//span[contains(text(), 'загружается')]")));
-
-        // вставим подписи под картинками:
-        tagListIndex = 0;
-
-        for (String paragraph : translatedTextList) {
-
-            if (tagList.get(tagListIndex).equals("figure")) {
-                driver.findElement(By.xpath("//figcaption[@class='zen-editor-block-image__caption zen-editor-block-image__caption_empty']")).click();
-                webTextInputField.sendKeys(paragraph);
-            }
-            tagListIndex++;
-        }
-
 
         // ждём, пока появится надпись "Сохранено":
         wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[contains(text(), 'Сохранено')]")));
@@ -209,5 +219,15 @@ public class YandexZenArticleCreate {
                 rb.keyRelease(KeyEvent.VK_V);
                 rb.keyRelease(KeyEvent.VK_CONTROL);
             */
+
+             /*
+             //копируем картинку в буфер обмена:
+                Image image = ImageIO.read(new URL(imgUrlLinks.get(imgUrlListIndex++)));
+                ImageTransferable imageTransferable = new ImageTransferable(image);
+                Toolkit.getDefaultToolkit().getSystemClipboard().setContents(imageTransferable, null);
+              */
+
+
+               //waitHintWindow.ignoring(org.openqa.selenium.TimeoutException.class);
 
 

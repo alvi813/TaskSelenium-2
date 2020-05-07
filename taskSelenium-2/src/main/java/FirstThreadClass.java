@@ -1,18 +1,9 @@
-import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.*;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.awt.*;
-import java.awt.datatransfer.UnsupportedFlavorException;
-import java.io.File;
-import java.io.FileReader;
 import java.io.IOException;
-import java.net.URISyntaxException;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Properties;
 import java.util.Set;
 
 public class FirstThreadClass extends YandexZen implements Runnable {
@@ -35,15 +26,13 @@ public class FirstThreadClass extends YandexZen implements Runnable {
 
 
 
-
-
-        for (int counterOnHowManyPagesWillCollectLinks = 10;
+        for (int counterOnHowManyPagesWillCollectLinks = 15;
              numberOfLinkInTextFile <= counterOnHowManyPagesWillCollectLinks;
              numberOfLinkInTextFile++) {
 
 
             WebDriver firefoxDriver = new FirefoxDriver(firefoxOptions);
-            //seleniumTask.maximizeWindow(firefoxDriver);
+            //seleniumTask.maximizeWindow(firefoxDriver);  // for debugging
 
 
             LinksCollection linksCollection = null;
@@ -76,6 +65,7 @@ public class FirstThreadClass extends YandexZen implements Runnable {
                 e.printStackTrace();
             }
 
+
             try {
                 assert urlLinksSet != null;
                 linksCollection.writeLinksToFile(urlLinksSet);
@@ -83,7 +73,9 @@ public class FirstThreadClass extends YandexZen implements Runnable {
                 e.printStackTrace();
             }
 
-            linksCollection.printLinkCollectionToConsole(urlLinksSet);
+
+            // linksCollection.printLinkCollectionToConsole(urlLinksSet);  // for debugging
+
 
             ParagraphsCollection paragraphsCollection = null;
             try {
@@ -92,11 +84,13 @@ public class FirstThreadClass extends YandexZen implements Runnable {
                 e.printStackTrace();
             }
 
+
             assert paragraphsCollection != null;
             List<WebElement> webTextList = paragraphsCollection.collectWebElementParagraphs();
             List<String> textList = paragraphsCollection.collectStringParagraphs(webTextList);
             String articleTitle = paragraphsCollection.collectArticleTitle(firefoxDriver);
             List<String> paragraphsTagList = paragraphsCollection.collectParagraphsTags(webTextList);
+
 
             // Соберём url картинок:
             ImgUrlCollection imgUrlCollection = null;
@@ -106,19 +100,22 @@ public class FirstThreadClass extends YandexZen implements Runnable {
                 e.printStackTrace();
             }
 
+
             assert imgUrlCollection != null;
             List<String> imgUrlLinks = imgUrlCollection.collectWebElementImgUrl();
 
-            paragraphsCollection.printArticleTitleToConsole(articleTitle);
-            paragraphsCollection.printTextCollectionToConsole(textList);
+            // paragraphsCollection.printArticleTitleToConsole(articleTitle);  // for debugging
+            // paragraphsCollection.printTextCollectionToConsole(textList);  // for debugging
 
             closeDriver(firefoxDriver);
+
 
 
             //---------------------------------------------------------------------------------------------------
 
 
-/*            WebDriver firefoxDriver2 = new FirefoxDriver(firefoxOptions);
+
+            WebDriver firefoxDriver2 = new FirefoxDriver(firefoxOptions);
             maximizeWindow(firefoxDriver2);
 
             TextTranslation textTranslation = null;
@@ -128,6 +125,7 @@ public class FirstThreadClass extends YandexZen implements Runnable {
                 e.printStackTrace();
             }
 
+            assert textTranslation != null;
             String googleTranslateUrl = textTranslation.getGoogleTranslateUrl();
             openWebPage(firefoxDriver2, googleTranslateUrl);
             List<String> translatedTextList = textTranslation.translateParagraphs(textList);
@@ -135,9 +133,12 @@ public class FirstThreadClass extends YandexZen implements Runnable {
             //textTranslation.printTranslatedTextWithTitleToConsole(translatedArticleTitle, translatedTextList);
 
             closeDriver(firefoxDriver2);
-*/
+
+
 
             //---------------------------------------------------------------------------------------------------
+
+
 
             //------------
             specifyFirefoxProfile(firefoxOptions, myFirefoxProfile);
@@ -146,29 +147,20 @@ public class FirstThreadClass extends YandexZen implements Runnable {
             WebDriver firefoxDriver3 = new FirefoxDriver(firefoxOptions);
 
             YandexZenArticleCreate yandexZenArticle = null;
-            try {
-                yandexZenArticle = new YandexZenArticleCreate(firefoxDriver3);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+            yandexZenArticle = new YandexZenArticleCreate(firefoxDriver3);
 
             openWebPage(firefoxDriver3, yandexZenChannelUrl);
             //seleniumTask.maximizeWindow(firefoxDriver3);
             setWindowSize(firefoxDriver3);
 
-            /*try {
-                assert yandexZenArticle != null;
-                yandexZenArticle.addArticleToYandexZen(translatedArticleTitle, translatedTextList, paragraphsTagList, imgUrlLinks);
-            } catch (IOException | UnsupportedFlavorException | AWTException | URISyntaxException | InterruptedException e) {
-                e.printStackTrace();
-            }*/
-
             try {
                 assert yandexZenArticle != null;
-                yandexZenArticle.addArticleToYandexZen(articleTitle, textList, paragraphsTagList, imgUrlLinks);
-            } catch (IOException | UnsupportedFlavorException | AWTException | URISyntaxException | InterruptedException e) {
+                yandexZenArticle.addArticleToYandexZen(translatedArticleTitle, translatedTextList, paragraphsTagList, imgUrlLinks);
+            } catch (IOException e) {
                 e.printStackTrace();
             }
+
+
 
             closeDriver(firefoxDriver3);
 
@@ -178,3 +170,22 @@ public class FirstThreadClass extends YandexZen implements Runnable {
         }
     }
 }
+
+
+
+
+
+
+
+
+    /*
+       //for debugging:
+
+            try {
+                assert yandexZenArticle != null;
+                yandexZenArticle.addArticleToYandexZen(articleTitle, textList, paragraphsTagList, imgUrlLinks);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+     */
