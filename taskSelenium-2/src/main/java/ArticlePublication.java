@@ -122,7 +122,7 @@ public class ArticlePublication {
         // если картинка есть, опубликуем статью:
         if (webElement.getAttribute("style").contains("background-color")) {
             //System.out.println("With picture");
-            driver.findElement(By.xpath("//div[contains(@class, 'publication-card-item')][3]//button[contains(@class, 'ui-lib-button')]")).click();
+            driver.findElement(By.xpath("//div[contains(@class, 'publication-card-item')][" + articleNumberFromTheLeftEdge + "]//button[contains(@class, 'ui-lib-button')]")).click();
             wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@class='ui-lib-context-menu']//span[contains(text(), 'Отредактировать')]")));
             driver.findElement(By.xpath("//div[@class='ui-lib-context-menu']//span[contains(text(), 'Отредактировать')]")).click();
 
