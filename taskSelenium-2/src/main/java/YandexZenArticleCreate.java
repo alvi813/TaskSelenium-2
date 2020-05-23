@@ -20,7 +20,7 @@ public class YandexZenArticleCreate {
     private int tagListIndex = 0;
     private int imgUrlListIndex = 0;
 
-    public void dowloadFileImage(List<String> imgUrlLinks, String pathSaveImage) throws IOException {
+    public void downloadFileImage(List<String> imgUrlLinks, String pathSaveImage) throws IOException {
         URL connection = new URL(imgUrlLinks.get(imgUrlListIndex++));
         HttpURLConnection urlconn;
         urlconn = (HttpURLConnection) connection.openConnection();
@@ -94,7 +94,7 @@ public class YandexZenArticleCreate {
                 // производим скачивание по url картинки:
                 String pathSaveImage = "src/main/images/articleImage.jpeg";
 
-                dowloadFileImage(imgUrlLinks, pathSaveImage);
+                downloadFileImage(imgUrlLinks, pathSaveImage);
 
                 File file = new File(pathSaveImage);
 

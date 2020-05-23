@@ -31,7 +31,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -46,7 +46,7 @@
       <recent name="W:\MyTasks\taskSelenium\drivers" />
     </key>
   </component>
-  <component name="RunManager" selected="Maven.taskSelenium-2 [clean,compile,package]">
+  <component name="RunManager" selected="Maven.taskSelenium-2 [clean,compile,package...]">
     <configuration name="SeleniumTask" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="SeleniumTask" />
       <module name="taskSelenium-2" />
@@ -81,8 +81,68 @@
       </MavenSettings>
       <method v="2" />
     </configuration>
+    <configuration name="taskSelenium-2 [clean,compile,package...]" type="MavenRunConfiguration" factoryName="Maven" temporary="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="compile" />
+                <option value="package" />
+                <option value="verify" />
+                <option value="install" />
+              </list>
+            </option>
+            <option name="pomFileName" value="pom.xml" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="taskSelenium-2 [clean,compile,test...]" type="MavenRunConfiguration" factoryName="Maven" temporary="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="compile" />
+                <option value="test" />
+                <option value="package" />
+                <option value="install" />
+              </list>
+            </option>
+            <option name="pomFileName" value="pom.xml" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Maven.taskSelenium-2 [clean,compile,package...]" />
+        <item itemvalue="Maven.taskSelenium-2 [clean,compile,test...]" />
         <item itemvalue="Maven.taskSelenium-2 [clean,compile,package]" />
         <item itemvalue="Application.SeleniumTask" />
       </list>
@@ -133,7 +193,16 @@
       <workItem from="1588556703179" duration="19357000" />
       <workItem from="1588633110716" duration="21334000" />
       <workItem from="1588712460581" duration="12399000" />
-      <workItem from="1588806746732" duration="12825000" />
+      <workItem from="1588806746732" duration="13452000" />
+      <workItem from="1589425231694" duration="9000" />
+      <workItem from="1589935789539" duration="18367000" />
+      <workItem from="1590021158797" duration="267000" />
+      <workItem from="1590021892224" duration="2010000" />
+      <workItem from="1590031370279" duration="757000" />
+      <workItem from="1590037074705" duration="59000" />
+      <workItem from="1590102082088" duration="240000" />
+      <workItem from="1590102332231" duration="10851000" />
+      <workItem from="1590213518812" duration="4205000" />
     </task>
     <servers />
   </component>
@@ -161,45 +230,53 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="765" y="228" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1588558154482" />
-    <state width="1801" height="208" key="GridCell.Tab.0.bottom" timestamp="1588820374800">
+    <state x="740" y="291" key="FileChooserDialogImpl" timestamp="1590113375185">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1801" height="208" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1588820374800" />
-    <state width="1801" height="208" key="GridCell.Tab.0.center" timestamp="1588820374799">
+    <state x="740" y="291" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1590113375185" />
+    <state width="1801" height="208" key="GridCell.Tab.0.bottom" timestamp="1589973648675">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1801" height="208" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1588820374799" />
-    <state width="1801" height="208" key="GridCell.Tab.0.left" timestamp="1588820374799">
+    <state width="1801" height="208" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1589973648675" />
+    <state width="1801" height="208" key="GridCell.Tab.0.center" timestamp="1589973648674">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1801" height="208" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1588820374799" />
-    <state width="1801" height="208" key="GridCell.Tab.0.right" timestamp="1588820374800">
+    <state width="1801" height="208" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1589973648674" />
+    <state width="1801" height="208" key="GridCell.Tab.0.left" timestamp="1589973648674">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1801" height="208" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1588820374800" />
-    <state width="1801" height="332" key="GridCell.Tab.1.bottom" timestamp="1588810995631">
+    <state width="1801" height="208" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1589973648674" />
+    <state width="1801" height="208" key="GridCell.Tab.0.right" timestamp="1589973648674">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1801" height="332" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1588810995631" />
-    <state width="1801" height="332" key="GridCell.Tab.1.center" timestamp="1588810995631">
+    <state width="1801" height="208" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589973648674" />
+    <state width="1801" height="332" key="GridCell.Tab.1.bottom" timestamp="1588821700869">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1801" height="332" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1588810995631" />
-    <state width="1801" height="332" key="GridCell.Tab.1.left" timestamp="1588810995631">
+    <state width="1801" height="332" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1588821700869" />
+    <state width="1801" height="332" key="GridCell.Tab.1.center" timestamp="1588821700869">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1801" height="332" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1588810995631" />
-    <state width="1801" height="332" key="GridCell.Tab.1.right" timestamp="1588810995631">
+    <state width="1801" height="332" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1588821700869" />
+    <state width="1801" height="332" key="GridCell.Tab.1.left" timestamp="1588821700869">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1801" height="332" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1588810995631" />
+    <state width="1801" height="332" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1588821700869" />
+    <state width="1801" height="332" key="GridCell.Tab.1.right" timestamp="1588821700869">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1801" height="332" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1588821700869" />
     <state x="590" y="302" key="SettingsEditor" timestamp="1587784665413">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="590" y="302" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1587784665413" />
-    <state x="744" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1588806746939">
+    <state x="744" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1590102082083">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="744" y="345" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588806746939" />
+    <state x="744" y="345" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590102082083" />
+    <state x="343" y="231" key="new project wizard" timestamp="1590022986506">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="343" y="231" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1590022986506" />
   </component>
 </project>
